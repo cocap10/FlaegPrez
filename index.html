@@ -21,7 +21,7 @@ URL: https://code.google.com/p/io-2012-slides
   <!--This one seems to work all the time, but really small on ipad-->
   <!--<meta name="viewport" content="initial-scale=0.4">-->
   <meta name="apple-mobile-web-app-capable" content="yes">
-   <link rel="shortcut icon" href=" figures/flaeg.icon.png"/> 
+   <link rel="shortcut icon" href=" figures/golang.icon.png"/> 
   <link rel="stylesheet" media="all" href="theme/css/default.css">
   <link rel="stylesheet" media="all" href="theme/css/custom.css">
   <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
@@ -73,17 +73,24 @@ URL: https://code.google.com/p/io-2012-slides
 <slide  >
   
     <hgroup>
-      <h2>/WhoamI</h2>
+      <h2>/WhoamI : Martin Piegay</h2>
       <h3></h3>
     </hgroup>
-    <article ><ul>
-<li>Martin Piegay</li>
-<li>En stage à l'agence Lyonnaise depuis Mars</li>
-<li>Mais je suis Stéphanois (et je le vie bien)</li>
-<li>Je viens de l'école d'ingé Télécom St-Etienne <img src=figures/tse.icon.png /></li>
-<li>Formation info &amp; réseau</li>
-<li>J'ai passé les 6 derniers mois en Erasmus à Prague  <img src=figures/beer.icon.png /></li>
-</ul></article>
+    <article ><p>En stage à l'agence Lyonnaise depuis Mars <img src=figures/zenika.icon.jpg /></p>
+<p>Mais je suis Stéphanois (et je le vie bien)</p>
+<p>Je viens de l'école d'ingé Télécom St-Etienne <img src=figures/tse.icon.png /></p>
+<p>Formation info &amp; réseau</p>
+<p>J'ai passé les 6 derniers mois en Erasmus à Prague <img src=figures/beer.icon.png /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Flæg : Build CLI & Load Configuration</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img src=figures/flaeg.logo.png /></p></article>
  
 </slide>
 
@@ -93,13 +100,10 @@ URL: https://code.google.com/p/io-2012-slides
       <h2>Flæg : What is it ?</h2>
       <h3></h3>
     </hgroup>
-    <article ><ul>
-<li>Une librairie pour le langage Go <img src=figures/golang.icon.png /></li>
-<li>Génère une interface en ligne de commande (CLI) dynamiquement</li>
-<li>Utilise le nom des variables de la structure de configuration pour les flags</li>
-<li>Utilise la réflectivité pour remplir la structure de configuration</li>
-</ul>
-<p><img src=figures/flaeg.logo.png /></p></article>
+    <article ><p>Une librairie pour le langage <a href="https://golang.org/">Go</a> <img src=figures/golang.icon.png /></p>
+<p>Génère une interface en ligne de commande <img src=figures/cli.icon.png /></p>
+<p>Initialise la structure de configuration avec les arguments</p>
+<p>C'est open source, sur <a href="http://github.com/containous/flaeg">github</a> :)</p></article>
  
 </slide>
 
@@ -109,30 +113,53 @@ URL: https://code.google.com/p/io-2012-slides
       <h2>Go lang</h2>
       <h3></h3>
     </hgroup>
-    <article ><ul>
-<li>Né en 2010 par Google</li>
-<li>Sources compilé, build </li>
-<li>Compilation de 80 % à 90 % plus rapide que en C</li>
-<li>Version 1.5</li>
-</ul></article>
+    <article ><p>Langage open source crée en 2010 par Google</p>
+<p>Syntaxe simple et efficace :</p>
+<p><code>func main(){
+  fmt.Println("Hello, 世界")
+}</code></p>
+<p>Compilation de 80 % à 90 % plus rapide que en C</p>
+<p>Tout les dépendances sont intégrées dans le binaire</p>
+<p>Langage jeune : Encore assez peu de librairie</p>
+<p>17/02/2016 : Version 1.6</p></article>
  
 </slide>
 
 <slide  >
   
     <hgroup>
-      <h2>Traefik : Owner</h2>
+      <h2>Flæg : Why is it better ?</h2>
       <h3></h3>
     </hgroup>
-    <article ><ul>
-<li>Emile Vauge</li>
-<li>Emile est un ancien Consultant &amp; Formateur Zenika <img src=figures/zenika.icon.png /></li>
-<li>Il a plus de 10 ans d'expérience dans le DevOps</li>
-<li>Il est certifié Docker formateur <img src=figures/docker.icon.png /></li>
-<li>Depuis Septembre 2015 il développe le Reverse-proxy/Load-balancer Traefik en Go</li>
-<li>En Février 2016, il a quitté Zenika pour monter la zStartup Containous </li>
-<li>Il se consacre exclusivement au développement de Træfik <img src=figures/traefik.icon.png /></li>
-</ul></article>
+    <article ><p>Tout est dynamique, le développeur Go n'a presque rien à faire !</p>
+<p><code>[--flag=flag_argument]</code> : Utilise le nom des champs de la structure de configuration</p>
+<p>Utilise la réflectivité pour initialiser les champs la structure de configuration</p>
+<p>C'est générique, le développeur Go peux ajouter des Parsers sur ses objets complexes</p>
+<p>C'est personnalisable, il suffit d'ajouter un tag pour changer le nom des flags</p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Træfik : A modern reverse-proxy</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img src=figures/traefik.logo.png /></p></article>
+ 
+</slide>
+
+<slide  >
+  
+    <hgroup>
+      <h2>Træfik : Emile Vauge</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p>Emile est un ancien Consultant &amp; Formateur Zenika <img src=figures/zenika.icon.jpg /></p>
+<p>Il est certifié Docker formateur <img src=figures/docker.icon.png /></p>
+<p>Depuis Septembre 2015 il développe le Reverse-proxy/Load-balancer Traefik en Go</p>
+<p>En Février 2016, il a quitté Zenika pour monter la zStartup <a href="https://containo.us/">Containous</a> <img src=figures/containous.icon.png /></p>
+<p>Il se consacre exclusivement au développement de  <a href="https://traefik.io/">Træfik</a> <img src=figures/traefik.icon.png /></p></article>
  
 </slide>
 
@@ -140,7 +167,7 @@ URL: https://code.google.com/p/io-2012-slides
   
     <hgroup>
       <h2>Reverse-proxy/Load-balancer :</h2>
-      <h3>What is it ?</h3>
+      <h3></h3>
     </hgroup>
     <article ><p><img height=500 src=figures/traditionnalArchitecture.png /></p></article>
  
@@ -149,10 +176,41 @@ URL: https://code.google.com/p/io-2012-slides
 <slide class="img-top-center" >
   
     <hgroup>
-      <h2>Traefik : Why is it better ?</h2>
+      <h2>Træfik : Why is it better ?</h2>
       <h3></h3>
     </hgroup>
-    <article ><p><img height=500 src=figures/traefikArchitecture.png /></p></article>
+    <article ><p><img height=500 src=figures/traefikArchitecture.svg /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Træfik : Success story</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><img height=400 src=figures/docker.image.png /> 
+<img height=100 src=figures/traefik.stars.svg /></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Træfik : Old CLI</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><p><a href="https://github.com/containous/traefik/blob/master/cmd.go"><img height=500 src=figures/traefikOldCli.png /></a></p></article>
+ 
+</slide>
+
+<slide class="img-top-center" >
+  
+    <hgroup>
+      <h2>Træfik using Flæg</h2>
+      <h3></h3>
+    </hgroup>
+    <article ><h2><a href="https://github.com/cocap10/traefik/blob/migrate-to-flaeg/configuration.go"><img height=500 src=figures/traefikFlaegCli.png /></a></h2></article>
  
 </slide>
 
